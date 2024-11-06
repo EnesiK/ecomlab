@@ -1,7 +1,7 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block title %}Login{% endblock title %}
-{% block main-contect %}
+{% block main-content %}
 <div class="container">
     <div class="row my-3">
         <div class="col-sm-6 offset-sm-3">
@@ -13,10 +13,11 @@
                     {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small> <br>
                 {% endfor %}
 
-                <small><a href="{% url 'passwird_reset' %}">Forgot Password ?</a></small>
+                <small><a href="{% url 'password_reset' %}">Forgot Password ?</a></small>
                 <br>
                 <input type="submit" class="btn btn-primary mt-4" value="Login">
-                <div class="text-center text-primary fw-bold"><small>New User? <a href="{% url 'customerregistration' %}"
+                <div class="text-center text-primary fw-bold">
+                    <small>New User? <a href="{% url 'customerregistration' %}"
                     class="text-danger">Create an Account</a> </small>
                 </div>
 
@@ -29,4 +30,4 @@
         </div>
     </div>
 </div>
-{% endblock main-contect %}
+{% endblock main-content %}
